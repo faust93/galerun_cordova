@@ -1,6 +1,6 @@
 #### GALERUN
 
-Galerun image gallery frontend
+Galerun image gallery android frontend written in Cordova
 
 Work in progress..
 
