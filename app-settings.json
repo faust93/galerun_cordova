@@ -1,0 +1,42 @@
+[
+    {
+        "type":"group",
+        "title":"Common",
+        "items":[{
+			"title":"Download location",
+			"type":"textfield",
+                        "default":"Pictures",
+			"key":"dlpath"
+		}, {
+			"title":"Downscale factor",
+                        "description":"Fullscreen image downscale factor",
+			"type":"radio",
+			"key":"scale",
+			"default": "2.5",
+			"items":[{
+				"value":"0",
+				"title":"Original size"
+			}, {
+				"value":"1.8",
+				"title":"Big"
+			}, {
+				"value":"2.5",
+				"title":"Medium"
+			}, {
+				"value":"3.8",
+				"title":"Small"
+			}]
+		}, {
+			"title":"Use dark theme",
+			"type":"toggle",
+			"default":false,
+			"key":"theme"
+		}, {
+			"title":"Debug",
+			"type":"toggle",
+			"default":false,
+			"key":"debug"
+		}
+		]
+    }
+]

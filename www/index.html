@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src *; img-src * data: blob: *"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link rel="stylesheet" href="css/onsenui.css">
+        <link id="theme" rel="stylesheet" href="css/onsen-css-components.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/viewer.css">
+
+        <script src="js/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/Galerun.js"></script>
+        <script src="js/onsenui.min.js"></script>
+        <script src="js/index.js"></script>
+
+    </head>
+    <body>
+
+<ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="200px" onDeviceBackButton="menu.close()" animation="reveal" collapse swipeable>
+    <ons-page>
+    <p class="etched-text">Galerun</p>
+    <ons-list>
+    <ons-list-title>Servers</ons-list-title>
+    <div id="gsplitter">
+    </div>
+    <ons-list-item modifier="nodivider" onclick="menu.close();gsrvadd_dialog.show()" tappable>Add server</ons-list-item>
+    <ons-list-title>Other</ons-list-title>
+    <ons-list-item modifier="nodivider" onclick="fn.appSettings()" tappable>Settings</ons-list-item>
+    <ons-list-item onclick="fn.load('pages/about.html')" tappable>About</ons-list-item>
+    </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="pages/about.html"></ons-splitter-content>
+</ons-splitter>
+
+<ons-dialog id="gsrvadd_dialog" cancelable>
+<div style="text-align: center; padding: 10px;">
+    <p>
+      <b>Add Galerun server</b>
+    </p>
+    <p>
+      <ons-input id="servername" modifier="underbar" placeholder="Server name" float></ons-input>
+    </p>
+    <p>
+      <ons-input id="serverurl" modifier="underbar" placeholder="Server URL" float></ons-input>
+    </p>
+    <p>
+      <ons-input id="serveruser" modifier="underbar" placeholder="User name" float></ons-input>
+    </p>
+    <p>
+      <ons-input id="serverpass" modifier="underbar" type="password" placeholder="User password" float></ons-input>
+    </p>
+    <p style="margin-top: 30px;">
+      <ons-button onclick="fn.addServer()">Add</ons-button>
+      <ons-button onclick="gsrvadd_dialog.hide()">Cancel</ons-button>
+    </p>
+</div>
+</ons-dialog>
+
+<ons-dialog id="gsrvedit_dialog" cancelable>
+<div style="text-align: center; padding: 10px;">
+    <p>
+      <b>Edit Galerun server</b>
+    </p>
+    <p>
+      <ons-input id="servername" modifier="underbar" placeholder="Server name" float></ons-input>
+    </p>
+    <p>
+      <ons-input id="serverurl" modifier="underbar" placeholder="Server URL" float></ons-input>
+    </p>
+    <p>
+      <ons-input id="serveruser" modifier="underbar" placeholder="User name" float></ons-input>
+    </p>
+    <p>
+      <ons-input id="serverpass" modifier="underbar" type="password" placeholder="User password" float></ons-input>
+    </p>
+    <p style="margin-top: 30px;">
+      <ons-button onclick="fn.updateServer()">Ok</ons-button>
+      <ons-button onclick="fn.deleteServer()">Delete</ons-button>
+    </p>
+</div>
+</ons-dialog>
+
+    </body>
+</html>

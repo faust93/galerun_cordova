@@ -1,0 +1,64 @@
+{
+  "_from": "git+https://github.com/DmcSDK/cordova-plugin-mediaPicker.git",
+  "_id": "cordova-plugin-mediapicker-dmcsdk@2.4.5",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-mediapicker-dmcsdk",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/DmcSDK/cordova-plugin-mediaPicker.git",
+    "rawSpec": "https://github.com/DmcSDK/cordova-plugin-mediaPicker.git",
+    "saveSpec": "git+https://github.com/DmcSDK/cordova-plugin-mediaPicker.git",
+    "fetchSpec": "https://github.com/DmcSDK/cordova-plugin-mediaPicker.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/DmcSDK/cordova-plugin-mediaPicker.git#4278dd406536e00b4ba070854c26719ddcc4cedd",
+  "_spec": "https://github.com/DmcSDK/cordova-plugin-mediaPicker.git",
+  "_where": "/home/faust/DEV/cordova/galerun",
+  "author": {
+    "name": "DmcSDK"
+  },
+  "bugs": {
+    "url": "https://github.com/DmcSDK/cordova-plugin-mediaPicker/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-mediapicker-dmcsdk",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "android ios mediaPicker support selection of multiple image and video",
+  "homepage": "https://github.com/DmcSDK",
+  "keywords": [
+    "cordova",
+    "imagePicker",
+    "image Picker",
+    "Multiple Image Selection",
+    "video Selection",
+    "gif Selection",
+    "cordova-android",
+    "cordova-ios",
+    "mediaPicker",
+    "videoPicker",
+    "video Picker",
+    "gifPicker",
+    "compress",
+    "fileToBlob",
+    "compress image"
+  ],
+  "license": "ISC",
+  "name": "cordova-plugin-mediapicker-dmcsdk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmcSDK/cordova-plugin-mediaPicker.git"
+  },
+  "version": "2.4.5"
+}

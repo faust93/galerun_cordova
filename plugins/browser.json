@@ -1,0 +1,37 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.faust93.galerun"
+    },
+    "cordova-plugin-app-preferences": {
+      "PACKAGE_NAME": "com.faust93.galerun"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.faust93.galerun"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.faust93.galerun"
+    },
+    "cordova-plugin-mediapicker-dmcsdk": {
+      "PACKAGE_NAME": "com.faust93.galerun"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.faust93.galerun"
+    },
+    "cordova-plugin-web-share": {
+      "PACKAGE_NAME": "com.faust93.galerun"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.faust93.galerun"
+    }
+  }
+}

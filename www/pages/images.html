@@ -1,0 +1,96 @@
+<ons-page id="images-page">
+<script src="js/viewer.js"></script>
+<script src="js/lazyload.js"></script>
+<script>
+    fn.listImages("/");
+</script>
+
+<ons-toolbar>
+    <div class="left">
+    <ons-toolbar-button onclick="fn.open()">
+        <ons-icon icon="md-menu"></ons-icon>
+    </ons-toolbar-button>
+    </div>
+     <div id="gimg-header" class="center">
+     Images
+     </div>
+    <div class="right">
+    <div id="toolbar1">
+     <ons-toolbar-button onclick="fn.search()">
+        <ons-icon icon="md-search"></ons-icon>
+     </ons-toolbar-button>
+     <ons-toolbar-button onclick="gthumbSheet.show()">
+        <ons-icon icon="md-zoom-in"></ons-icon>
+     </ons-toolbar-button>
+     <ons-toolbar-button onclick="fn.sortButton()">
+        <ons-icon id="gsortOrder" icon="md-amount-desc"></ons-icon>
+     </ons-toolbar-button>
+     <ons-toolbar-button id="menuButton" onclick="menuDialog.show('#menuButton')">
+        <ons-icon icon="md-more-vert"></ons-icon>
+     </ons-toolbar-button>
+     </div>
+
+     <div id="toolbar2"  style="display: none">
+     <ons-toolbar-button id="gsel_badge" onclick="fn.selAction()">
+     </ons-toolbar-button>
+     <ons-toolbar-button onclick="fn.batchMove()">
+        <ons-icon icon="md-paste"></ons-icon>
+     </ons-toolbar-button>
+     <ons-toolbar-button onclick="fn.batchDelete()">
+        <ons-icon icon="md-delete"></ons-icon>
+     </ons-toolbar-button>
+     <ons-toolbar-button onclick="fn.deselectItems()">
+        <ons-icon icon="md-close"></ons-icon>
+     </ons-toolbar-button>
+     </div>
+    </div>
+</ons-toolbar>
+<ons-progress-bar id="gupload_progress" value="0"></ons-progress-bar>
+
+<div id="g-images" class="gimgv">
+</div>
+</ons-page>
+
+<ons-toast id="gimgLoading" animation="ascend">
+<div style="text-align: center">
+<p>
+<ons-icon icon="md-spinner" size="18px" spin></ons-icon> Loading...
+</p>
+</div>
+</ons-toast>
+
+<ons-action-sheet id="gthumbSheet" cancelable title="Thumbnails Size">
+    <ons-action-sheet-button icon="fa-th-large" onclick="fn.setThumbSize(2.13)">Big</ons-action-sheet-button>
+    <ons-action-sheet-button icon="fa-th-list" onclick="fn.setThumbSize(4.4)">Medium</ons-action-sheet-button>
+    <ons-action-sheet-button icon="fa-th" onclick="fn.setThumbSize(6.8)">Small</ons-action-sheet-button>
+    <ons-action-sheet-button icon="md-close" onclick="gthumbSheet.hide()">Cancel</ons-action-sheet-button>
+</ons-action-sheet>
+
+<ons-action-sheet id="gImgDialog" data-file="" cancelable>
+    <ons-action-sheet-button icon="md-file-plus" onclick="fn.selectItem()">Select</ons-action-sheet-button>
+    <ons-action-sheet-button icon="md-info" onclick="fn.infoImg()">Details</ons-action-sheet-button>
+    <ons-action-sheet-button icon="md-share" onclick="fn.shareImg()">Share</ons-action-sheet-button>
+    <ons-action-sheet-button icon="md-download" onclick="fn.downloadImg()">Download</ons-action-sheet-button>
+    <ons-action-sheet-button icon="md-delete" onclick="fn.deleteImg()">Delete</ons-action-sheet-button>
+</ons-action-sheet>
+
+<ons-action-sheet id="gDirDialog" data-file="" cancelable>
+    <ons-action-sheet-button icon="md-info" onclick="fn.infoDir()">Details</ons-action-sheet-button>
+    <ons-action-sheet-button icon="md-delete" onclick="fn.deleteDir()">Delete</ons-action-sheet-button>
+</ons-action-sheet>
+
+<ons-popover id="menuDialog" cancelable direction="down" target="#menuButton">
+<ons-list id="menuList">
+<ons-list-item class="more-options" tappable onclick="menuDialog.hide();fn.createDir()">
+<div class="center">Create folder</div>
+</ons-list-item>
+<ons-list-item class="more-options" tappable onclick="menuDialog.hide();fn.imgUpload()">
+<div class="center">Upload images</div>
+</ons-list-item>
+</ons-list>
+</ons-popover>
+
+<ons-dialog id="gItemInfo_dialog" cancelable>
+<div id="gItemInfo" style="font-size: 85%; text-align: center; padding: 10px;">
+</div>
+</ons-dialog>
